@@ -21,7 +21,7 @@ h1 {
 h4 {
   text-align: center;
 }
-.me {
+#me {
   /* position: relative;
   width: 50%;
   margin: 0 auto;
@@ -45,7 +45,7 @@ h4 {
   bottom: 0;
   left: 40%;
 }
-.remote-container {
+#remote-container {
   /* display: flex; */
   width: 100%;
   height: 100%;
