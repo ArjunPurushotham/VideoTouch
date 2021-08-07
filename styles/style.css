@@ -1,25 +1,62 @@
 * {
   font-family: sans-serif;
 }
-h1,
+
+#videocall {
+  width: 800px;
+  height: 420px;
+  position: relative;
+  border: solid 1px black;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+h1 {
+  position: absolute;
+  top: 0;
+  margin-left: 15px;
+  color: whitesmoke;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.7);
+}
 h4 {
   text-align: center;
 }
 #me {
-  position: relative;
+  /* position: relative;
   width: 50%;
   margin: 0 auto;
-  display: block;
+  display: block; */
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 1);
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 40%;
 }
 #me video {
-  position: relative !important;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 1);
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 40%;
 }
 #remote-container {
-  display: flex;
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 33, 52, 0.7);
+  z-index: -1;
 }
 #remote-container video {
-  height: auto;
-  position: relative !important;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 33, 52, 0.7);
+  z-index: -1;
 }
 
 .wrapper {
@@ -44,4 +81,12 @@ h4 {
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: RoyalBlue;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
