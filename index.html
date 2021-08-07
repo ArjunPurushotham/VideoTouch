@@ -10,31 +10,26 @@
     <script src="./scripts/scripts.js"></script>
 </head>
 
-<body >
-    <div class="videocall">
-    <h1 class="contactname">
+<body>
+    <h1>
         AGORA Touch<br><small style="font-size: 14pt;"></small>
     </h1>
     <h2>Your place for a seamless video call<br><small style="font-size: 14pt;"></small></h2>
     <div class="wrapper">
         <button class="btn" id="join" onClick="join()"><i class=fa fa-home></i>JOIN</button>
-        
+        <button class="btn" id="leave" onClick="leave()"><i class=fa fa-home></i>LEAVE</button>
+        <button class="btn" id="muteBtn" style="display: none;" onclick="muteAudio()"><i class=fa fa-home></i>Mute</button>
         <button class="btn" id="stpVidBtn" style="display: none;" onclick="stopVideo()">End Video Call</button>
 
     </div>
-    <div class="buttons">
-        <button class="btn" id="leave" onClick="leave()"><i class=fa fa-home></i>LEAVE</button>
-        <button class="btn" id="muteBtn" style="display: none;" onclick="muteAudio()"><i class=fa fa-home></i>Mute</button>
-    </div>
     <h4>My Video video</h4>
-    <div class="me">
+    <div class="row">
         <div id="me">
         </div>
     </div>
        
     <h4>Friend's video</h4>
     <div id="remote-container">
-    </div>
     </div>
 </body>
 
