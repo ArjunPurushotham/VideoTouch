@@ -21,7 +21,7 @@ h1 {
 h4 {
   text-align: center;
 }
-#me {
+.me {
   /* position: relative;
   width: 50%;
   margin: 0 auto;
@@ -35,7 +35,7 @@ h4 {
   bottom: 0;
   left: 40%;
 }
-#me video {
+.me video {
   width: 25%;
   height: 25%;
   position: absolute;
@@ -45,14 +45,14 @@ h4 {
   bottom: 0;
   left: 40%;
 }
-#remote-container {
+.remote-container {
   /* display: flex; */
   width: 100%;
   height: 100%;
   background: rgba(3, 33, 52, 0.7);
   z-index: -1;
 }
-#remote-container video {
+.container video {
   width: 100%;
   height: 100%;
   background: rgba(3, 33, 52, 0.7);
