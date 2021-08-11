@@ -117,6 +117,13 @@ function join() {
   } else {
     x.style.display = 'none';
   }
+
+  var y = document.getElementById('scshare');
+  if (y.style.display === 'none') {
+    y.style.display = 'block';
+  } else {
+    y.style.display = 'none';
+  }
 }
 
 function muteAudio() {
