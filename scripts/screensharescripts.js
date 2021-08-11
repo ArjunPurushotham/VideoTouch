@@ -70,11 +70,11 @@ function shareScreen(uid) {
   };
   // Set relevant properties according to the browser.
   // Note that you need to implement isFirefox and isCompatibleChrome.
-  if (isFirefox()) {
-    streamSpec.mediaSource = 'window';
-  } else if (!isCompatibleChrome()) {
-    streamSpec.extensionId = 'minllpmhdgpndnkomcoccfekfegnlikg';
-  }
+  //   if (isFirefox()) {
+  //     streamSpec.mediaSource = 'window';
+  //   } else if (!isCompatibleChrome()) {
+  //     streamSpec.extensionId = 'minllpmhdgpndnkomcoccfekfegnlikg';
+  //   }
   screenStream = AgoraRTC.createStream(streamSpec);
   // Initialize the stream.
   screenStream.init(
