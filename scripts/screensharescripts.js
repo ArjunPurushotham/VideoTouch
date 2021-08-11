@@ -53,42 +53,43 @@ screenClient.init('2df3320fa8b74f9c8c8a04ac377d85d4', function () {
     '0062df3320fa8b74f9c8c8a04ac377d85d4IADWoi3Hz3Dpp7+CYfn/HwrYKuYyU1fuWSJYmHHIt8jNg9+pr8cAAAAAEAB0GRUQdgMVYQEAAQB2AxVh',
     'mychannel',
     12345,
-    function shareScreen(uid) {
-      // Create the stream for screen sharing.
-      const streamSpec = {
-        streamID: uid,
-        audio: false,
-        //needed to show video and screen together,false if only screenshare
-        video: true,
-        screen: true,
-      };
-      // Set relevant properties according to the browser.
-      // Note that you need to implement isFirefox and isCompatibleChrome.
-      if (isFirefox()) {
-        streamSpec.mediaSource = 'window';
-      } else if (!isCompatibleChrome()) {
-        streamSpec.extensionId = 'minllpmhdgpndnkomcoccfekfegnlikg';
-      }
-      screenStream = AgoraRTC.createStream(streamSpec);
-      // Initialize the stream.
-      screenStream.init(
-        function () {
-          // Play the stream.
-          screenStream.play('me');
-
-          // Publish the stream.
-          screenClient.publish(screenStream);
-        },
-        function (err) {
-          console.log(err);
-        }
-      );
-    },
     function (err) {
       console.log(err);
     }
   );
 });
+
+function shareScreen(uid) {
+  // Create the stream for screen sharing.
+  const streamSpec = {
+    streamID: uid,
+    audio: false,
+    //needed to show video and screen together,false if only screenshare
+    video: true,
+    screen: true,
+  };
+  // Set relevant properties according to the browser.
+  // Note that you need to implement isFirefox and isCompatibleChrome.
+  if (isFirefox()) {
+    streamSpec.mediaSource = 'window';
+  } else if (!isCompatibleChrome()) {
+    streamSpec.extensionId = 'minllpmhdgpndnkomcoccfekfegnlikg';
+  }
+  screenStream = AgoraRTC.createStream(streamSpec);
+  // Initialize the stream.
+  screenStream.init(
+    function () {
+      // Play the stream.
+      screenStream.play('me');
+
+      // Publish the stream.
+      screenClient.publish(screenStream);
+    },
+    function (err) {
+      console.log(err);
+    }
+  );
+}
 //video call
 function join() {
   client.join(
