@@ -42,7 +42,7 @@ client.init(
 
 function join() {
   client.join(
-    '0062df3320fa8b74f9c8c8a04ac377d85d4IADgQcPSnzfrhS7loWQqbGdy7LgBTNwKw684e/Bi+fgFFN+pr8cAAAAAEADjKAaAn3UPYQEAAQCidQ9h',
+    '0062df3320fa8b74f9c8c8a04ac377d85d4IADWoi3Hz3Dpp7+CYfn/HwrYKuYyU1fuWSJYmHHIt8jNg9+pr8cAAAAAEAB0GRUQdgMVYQEAAQB2AxVh',
     'mychannel',
     '12345',
     (uid) => {
