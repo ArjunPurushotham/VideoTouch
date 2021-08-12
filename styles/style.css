@@ -15,10 +15,12 @@ h4 {
   position: relative !important;
 }
 #remote-container {
-  display: flex;
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
 }
 #remote-container video {
-  height: auto;
   position: relative !important;
 }
 

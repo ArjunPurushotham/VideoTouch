@@ -103,7 +103,6 @@ function join() {
       });
       localStream.init(() => {
         localStream.play('me');
-
         client.publish(localStream, handleError);
       }, handleError);
     },
@@ -125,10 +124,6 @@ function join() {
   } else {
     y.style.display = 'none';
   }
-  // Subscribe to the remote stream when it is published
-  client.on('stream-added', function (evt) {
-    client.subscribe(evt.stream, handleError);
-  });
 }
 
 function muteAudio() {
@@ -147,23 +142,16 @@ function leave() {
 
   document.getElementById('muteBtn').style.display = 'none';
 }
-// Subscribe to the remote stream when it is published
-client.on('stream-added', function (evt) {
-  client.subscribe(evt.stream, handleError);
-});
-
-// Play the remote stream when it is subsribed
-client.on('stream-subscribed', function (evt) {
-  let stream = evt.stream;
-  let streamId = String(stream.getId());
-  addVideoStream(streamId);
-  stream.play(streamId);
-});
 
 function screenshareleave() {
   localStream.stop();
   document.getElementById('screen share').disabled = false;
 }
+
+// Subscribe to the remote stream when it is published
+client.on('stream-added', function (evt) {
+  client.subscribe(evt.stream, handleError);
+});
 
 // Play the remote stream when it is subsribed
 client.on('stream-subscribed', function (evt) {
