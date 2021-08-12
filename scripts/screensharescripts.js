@@ -5,11 +5,12 @@ let handleError = function (err) {
 };
 
 // Query the container to which the remote stream belong.
-let remoteContainer = document.getElementById('remote-container');
 
 // Add video streams to the container.
 function addVideoStream(elementId) {
   // Creates a new div for every stream
+  let remoteContainer = document.getElementById('remote-container');
+
   let streamDiv = document.createElement('div');
   // Assigns the elementId to the div.
   streamDiv.id = elementId;
