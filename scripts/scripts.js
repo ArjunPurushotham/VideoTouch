@@ -5,7 +5,6 @@ let handleError = function (err) {
 };
 
 // Query the container to which the remote stream belong.
-let remoteContainer = document.getElementById('remote-container');
 
 // Add video streams to the container.
 function addVideoStream(elementId) {
@@ -15,6 +14,7 @@ function addVideoStream(elementId) {
   streamDiv.id = elementId;
   // Takes care of the lateral inversion
   streamDiv.style.transform = 'rotateY(180deg)';
+  let remoteContainer = document.getElementById('remote-container');
   // Adds the div to the container.
   remoteContainer.appendChild(streamDiv);
 }
