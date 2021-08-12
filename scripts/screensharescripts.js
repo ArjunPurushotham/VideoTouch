@@ -49,7 +49,7 @@ client.init(
 );
 
 screenClient.init('2df3320fa8b74f9c8c8a04ac377d85d4', function () {
-  screenClient.join(null, 'my-channel', null, function (err) {
+  screenClient.join(null, 'mychannel', null, function (err) {
     console.log(err);
   });
 });
@@ -89,7 +89,7 @@ function shareScreen(uid) {
 function join() {
   client.join(
     null,
-    'my-channel',
+    'mychannel',
     null,
     (uid) => {
       localStream = AgoraRTC.createStream({
