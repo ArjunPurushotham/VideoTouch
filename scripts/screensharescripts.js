@@ -39,7 +39,7 @@ var screenClient = AgoraRTC.createClient({
 });
 
 client.init(
-  '2df3320fa8b74f9c8c8a04ac377d85d4',
+  '2e7329e167784cf9a99aa38bf0cb9c2c',
   function () {
     console.log('client initialized');
   },
@@ -48,7 +48,7 @@ client.init(
   }
 );
 
-screenClient.init('2df3320fa8b74f9c8c8a04ac377d85d4', function () {
+screenClient.init('2e7329e167784cf9a99aa38bf0cb9c2c', function () {
   screenClient.join(null, 'mychannel', null, function (err) {
     console.log(err);
   });
