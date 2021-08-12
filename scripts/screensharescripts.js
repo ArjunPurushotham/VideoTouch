@@ -95,7 +95,7 @@ function join() {
   client.join(
     '0062df3320fa8b74f9c8c8a04ac377d85d4IADWoi3Hz3Dpp7+CYfn/HwrYKuYyU1fuWSJYmHHIt8jNg9+pr8cAAAAAEAB0GRUQdgMVYQEAAQB2AxVh',
     'mychannel',
-    12345,
+    19989,
     (uid) => {
       localStream = AgoraRTC.createStream({
         audio: true,
