@@ -49,14 +49,9 @@ client.init(
 );
 
 screenClient.init('2df3320fa8b74f9c8c8a04ac377d85d4', function () {
-  screenClient.join(
-    '0062df3320fa8b74f9c8c8a04ac377d85d4IADWoi3Hz3Dpp7+CYfn/HwrYKuYyU1fuWSJYmHHIt8jNg9+pr8cAAAAAEAB0GRUQdgMVYQEAAQB2AxVh',
-    'mychannel',
-    12345,
-    function (err) {
-      console.log(err);
-    }
-  );
+  screenClient.join(null, 'my-channel', null, function (err) {
+    console.log(err);
+  });
 });
 
 function shareScreen(uid) {
@@ -93,9 +88,9 @@ function shareScreen(uid) {
 //video call
 function join() {
   client.join(
-    '0062df3320fa8b74f9c8c8a04ac377d85d4IADWoi3Hz3Dpp7+CYfn/HwrYKuYyU1fuWSJYmHHIt8jNg9+pr8cAAAAAEAB0GRUQdgMVYQEAAQB2AxVh',
-    'mychannel',
-    19989,
+    null,
+    'my-channel',
+    null,
     (uid) => {
       localStream = AgoraRTC.createStream({
         audio: true,
